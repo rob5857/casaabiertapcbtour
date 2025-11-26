@@ -276,7 +276,7 @@ body {
 
 .contact h2 {
   text-align: center;
-  color: white;
+  color: blue;
   font-weight: 700;
   margin-bottom: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -730,6 +730,7 @@ footer a:hover {
     height: 18px;
   }
 }
+
 
 
 
