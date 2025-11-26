@@ -112,7 +112,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, rgba(0,51,160,0.85), rgba(0,102,204,0.85)),
-              url('/casaabiertapcbtour/foto.jpg') center/cover no-repeat;
+              url('Casa Abierta.jpg') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -268,8 +268,10 @@ body {
 
 /* Contact */
 .contact {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(rgba(0, 51, 160, 0.75), rgba(0, 102, 204, 0.75)),
+              url('escuela.png') center/cover no-repeat fixed;
   padding: 5rem 2rem;
+  position: relative;
 }
 
 .contact h2 {
@@ -277,6 +279,7 @@ body {
   color: white;
   font-weight: 700;
   margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Link de teléfono clickeable */
@@ -727,5 +730,3 @@ footer a:hover {
     height: 18px;
   }
 }
-
-
