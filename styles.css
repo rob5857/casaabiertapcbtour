@@ -269,7 +269,7 @@ body {
 /* Contact */
 .contact {
    background: linear-gradient(rgba(112, 112, 230, 0.918), rgba(122, 125, 128, 0.75)),
-              url('/casaabiertapcbtour/escuela.PNG') center/cover no-repeat fixed;
+              url('/casaabiertapcbtour/image30.png') center/cover no-repeat fixed;
   padding: 5rem 2rem;
   position: relative;
 }
@@ -730,5 +730,6 @@ footer a:hover {
     height: 18px;
   }
 }
+
 
 
