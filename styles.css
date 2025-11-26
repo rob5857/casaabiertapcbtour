@@ -112,7 +112,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, rgba(0,51,160,0.85), rgba(0,102,204,0.85)),
-              url('/casaabiertapcb/foto.jpg') center/cover no-repeat;
+              url('Casa Abierta.jpg') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -268,15 +268,28 @@ body {
 
 /* Contact */
 .contact {
-  background: var(--light-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   padding: 5rem 2rem;
 }
 
 .contact h2 {
   text-align: center;
-  color: var(--primary-color);
+  color: white;
   font-weight: 700;
   margin-bottom: 3rem;
+}
+
+/* Link de teléfono clickeable */
+.contact-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .contact .row {
@@ -505,3 +518,212 @@ footer a:hover {
   .info-card { padding: 1.5rem; }
 }
 
+/* Gallery Slideshow Section */
+.gallery-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.gallery-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+/* Carousel Container */
+#galleryCarousel {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 51, 160, 0.2);
+}
+
+/* Carousel Images */
+#galleryCarousel .carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(0.9);
+  transition: filter 0.5s ease;
+}
+
+/* Imágenes que necesitan centrado especial */
+#galleryCarousel .carousel-item img.img-centered {
+  object-position: center center;
+  object-fit: contain;
+  background-color: #1a1a2e;
+}
+
+#galleryCarousel .carousel-item.active img {
+  filter: brightness(1);
+}
+
+/* Carousel Captions */
+#galleryCarousel .carousel-caption {
+  background: linear-gradient(to top, rgba(0, 51, 160, 0.85), transparent);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+#galleryCarousel .carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+#galleryCarousel .carousel-caption p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Carousel Indicators */
+#galleryCarousel .carousel-indicators {
+  bottom: 20px;
+}
+
+#galleryCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+#galleryCarousel .carousel-indicators button.active {
+  background-color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+/* Carousel Controls */
+#galleryCarousel .carousel-control-prev,
+#galleryCarousel .carousel-control-next {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+#galleryCarousel .carousel-control-prev {
+  left: 20px;
+}
+
+#galleryCarousel .carousel-control-next {
+  right: 20px;
+}
+
+#galleryCarousel .carousel-control-prev:hover,
+#galleryCarousel .carousel-control-next:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 20px rgba(0, 51, 160, 0.4);
+}
+
+#galleryCarousel .carousel-control-prev-icon,
+#galleryCarousel .carousel-control-next-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Carousel */
+@media (max-width: 992px) {
+  #galleryCarousel {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  #galleryCarousel .carousel-item img {
+    height: 400px;
+  }
+
+  #galleryCarousel .carousel-caption h5 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 3rem 1rem;
+  }
+
+  #galleryCarousel .carousel-item img {
+    height: 300px;
+  }
+
+  #galleryCarousel .carousel-caption {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  #galleryCarousel .carousel-caption h5 {
+    font-size: 1.1rem;
+  }
+
+  #galleryCarousel .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  #galleryCarousel .carousel-control-prev,
+  #galleryCarousel .carousel-control-next {
+    width: 45px;
+    height: 45px;
+  }
+
+  #galleryCarousel .carousel-control-prev {
+    left: 10px;
+  }
+
+  #galleryCarousel .carousel-control-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #galleryCarousel .carousel-item img {
+    height: 250px;
+  }
+
+  #galleryCarousel .carousel-caption h5 {
+    font-size: 1rem;
+  }
+
+  #galleryCarousel .carousel-caption p {
+    font-size: 0.85rem;
+  }
+
+  #galleryCarousel .carousel-control-prev,
+  #galleryCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  #galleryCarousel .carousel-control-prev-icon,
+  #galleryCarousel .carousel-control-next-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
