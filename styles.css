@@ -112,7 +112,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, rgba(0,51,160,0.85), rgba(0,102,204,0.85)),
-              url('Casa Abierta.jpg') center/cover no-repeat;
+              url('/casaabiertapcb/foto.jpg') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -504,3 +504,4 @@ footer a:hover {
   .hero h1 { font-size: 2rem; }
   .info-card { padding: 1.5rem; }
 }
+
