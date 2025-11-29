@@ -112,7 +112,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, rgba(0,51,160,0.85), rgba(0,102,204,0.85)),
-              url('/casaabiertapcbtour/foto.jpg') center/cover no-repeat;
+              url('Casa Abierta.jpg') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -269,7 +269,7 @@ body {
 /* Contact */
 .contact {
   background: linear-gradient(rgba(216, 216, 226, 0.918), rgba(217, 220, 223, 0.75)),
-              url('/casaabiertapcbtour/image31.jpeg') center/cover no-repeat fixed;
+              url('escuela.png') center/cover no-repeat fixed;
   padding: 5rem 2rem;
   position: relative;
 }
@@ -732,8 +732,520 @@ footer a:hover {
 }
 
 
+/* ==========================================
+   DIRECTOR SECTION STYLES
+   ========================================== */
 
+.director-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
 
+.director-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
 
+.director-photo {
+  position: relative;
+  display: inline-block;
+}
 
+.director-photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 200, 255, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 102, 255, 0.3),
+              0 0 40px rgba(0, 200, 255, 0.2);
+  transition: all 0.4s ease;
+}
 
+.director-photo:hover img {
+  transform: scale(1.05);
+  border-color: #00ccff;
+  box-shadow: 0 25px 70px rgba(0, 102, 255, 0.4),
+              0 0 50px rgba(0, 200, 255, 0.3);
+}
+
+.director-info {
+  padding-left: 20px;
+}
+
+.director-info h3 {
+  color: #00ccff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.director-info h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+}
+
+.director-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.director-message {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.director-signature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #00ccff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.director-signature i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .director-section {
+    padding: 60px 0;
+  }
+
+  .director-photo img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .director-info {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .director-info h2 {
+    font-size: 2rem;
+  }
+
+  .director-message {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .director-signature {
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+   PCB SYSTEM POPUP & CHATBOT STYLES
+   ========================================== */
+
+/* Popup Overlay */
+.pcb-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.pcb-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup Container */
+.pcb-popup {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 24px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 25px 80px rgba(0, 102, 255, 0.3),
+              0 0 40px rgba(0, 200, 255, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: scale(0.7) translateY(50px);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+}
+
+.pcb-popup-overlay.active .pcb-popup {
+  transform: scale(1) translateY(0);
+}
+
+/* Popup Header */
+.pcb-popup-header {
+  background: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.pcb-popup-icon {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+.pcb-popup-icon i {
+  font-size: 40px;
+  background: linear-gradient(135deg, #0066ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pcb-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.pcb-popup-close:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(90deg);
+}
+
+/* Popup Body */
+.pcb-popup-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.pcb-popup-body h3 {
+  color: #00ccff;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.pcb-popup-body h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+}
+
+.pcb-popup-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Features Grid */
+.pcb-popup-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.pcb-feature {
+  background: rgba(0, 102, 255, 0.15);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.pcb-feature:hover {
+  background: rgba(0, 102, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 200, 255, 0.2);
+}
+
+.pcb-feature i {
+  font-size: 24px;
+  color: #00ccff;
+}
+
+.pcb-feature span {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.pcb-popup-message {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.pcb-popup-message strong {
+  color: #00ccff;
+}
+
+/* Popup Button */
+.pcb-popup-btn {
+  background: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 25px rgba(0, 102, 255, 0.4);
+}
+
+.pcb-popup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 102, 255, 0.5);
+}
+
+/* Powered by Computec */
+.pcb-popup-powered {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pcb-popup-powered span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.pcb-popup-powered img {
+  height: 35px;
+  width: auto;
+  filter: brightness(1.2);
+  transition: all 0.3s ease;
+}
+
+.pcb-popup-powered img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.4);
+}
+
+/* Chatbot Minimized */
+.pcb-chatbot {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.pcb-chatbot.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.pcb-chatbot-icon {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.pcb-chatbot:hover .pcb-chatbot-icon {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
+}
+
+.pcb-chatbot-icon i {
+  font-size: 28px;
+  color: white;
+  animation: float 3s ease-in-out infinite;
+}
+
+.pcb-chatbot-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.pcb-chatbot-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 65px;
+}
+
+.pcb-chatbot-logo {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pcb-chatbot-logo img {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pcb-popup {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .pcb-popup-body {
+    padding: 20px;
+  }
+
+  .pcb-popup-body h2 {
+    font-size: 1.6rem;
+  }
+
+  .pcb-popup-features {
+    gap: 10px;
+  }
+
+  .pcb-feature {
+    padding: 12px 8px;
+  }
+
+  .pcb-feature i {
+    font-size: 20px;
+  }
+
+  .pcb-feature span {
+    font-size: 0.75rem;
+  }
+
+  .pcb-chatbot {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .pcb-chatbot-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .pcb-chatbot-icon i {
+    font-size: 24px;
+  }
+
+  .pcb-chatbot-pulse {
+    width: 55px;
+    height: 55px;
+  }
+
+  .pcb-chatbot-logo {
+    bottom: -30px;
+    padding: 4px 8px;
+  }
+
+  .pcb-chatbot-logo img {
+    height: 16px;
+  }
+
+  .pcb-popup-powered img {
+    height: 28px;
+  }
+}

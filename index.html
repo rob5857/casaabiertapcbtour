@@ -35,7 +35,7 @@
   <section class="hero" id="inicio">
     <div class="container">
        <img src="LOGO6.png" alt="Logo CompuTec" class="header-gif">
-      <h1>"Acho, la Pablo es otra cosa..."</h1>
+      <h1>Acho, la Pablo es otra cosa...</h1>
       <h1>¡Casa Abierta PCB!</h1>
       <p>“Descubre tu futuro hoy" ¡Ven y visitanos!</p>
       <a href="#servicios" class="btn">Explorar Servicios</a>
@@ -217,6 +217,36 @@
     </div>
   </section>
 
+  <!-- Director Section -->
+  <section class="director-section" id="director">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-4 col-md-5 text-center mb-4 mb-md-0">
+          <div class="director-photo">
+            <img src="galeria/imagesdirector1.JPG" alt="Director Escolar Israel López Rivera" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-7">
+          <div class="director-info">
+            <h3>Mensaje del Director</h3>
+            <h2>Israel López Rivera</h2>
+            <p class="director-title">Director Escolar</p>
+            <p class="director-message">
+              "Bienvenidos a la Escuela Superior Vocacional Pablo Colón Berdecia. Nuestra misión es formar
+              jóvenes capacitados con las destrezas técnicas y valores necesarios para triunfar en el mundo
+              laboral y continuar su desarrollo profesional. En nuestra escuela, cada estudiante encuentra
+              un espacio para crecer, aprender y alcanzar sus sueños. ¡Los esperamos con las puertas abiertas!"
+            </p>
+            <div class="director-signature">
+              <i class="fas fa-signature"></i>
+              <span>Israel López Rivera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="contact" id="contacto">
     <div class="container">
@@ -309,6 +339,82 @@
         });
     });
   </script>
+
+  <!-- PCB System Popup -->
+  <div id="pcbSystemPopup" class="pcb-popup-overlay">
+    <div class="pcb-popup">
+      <div class="pcb-popup-header">
+        <div class="pcb-popup-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <button class="pcb-popup-close" onclick="closePopup()">&times;</button>
+      </div>
+      <div class="pcb-popup-body">
+        <h3>🚀 ¡Próximamente!</h3>
+        <h2>PCB System</h2>
+        <p class="pcb-popup-subtitle">La plataforma inteligente de nuestra escuela</p>
+        <div class="pcb-popup-features">
+          <div class="pcb-feature">
+            <i class="fas fa-user-graduate"></i>
+            <span>Servicios al Estudiante</span>
+          </div>
+          <div class="pcb-feature">
+            <i class="fas fa-users"></i>
+            <span>Servicios a Padres</span>
+          </div>
+          <div class="pcb-feature">
+            <i class="fas fa-school"></i>
+            <span>Comunidad Escolar</span>
+          </div>
+          <div class="pcb-feature">
+            <i class="fas fa-brain"></i>
+            <span>Inteligencia Artificial</span>
+          </div>
+        </div>
+        <p class="pcb-popup-message">
+          Estamos desarrollando una plataforma innovadora que integrará <strong>Inteligencia Artificial</strong> para beneficio de toda nuestra comunidad educativa.
+        </p>
+        <button class="pcb-popup-btn" onclick="closePopup()">
+          <i class="fas fa-thumbs-up me-2"></i>¡Entendido!
+        </button>
+        <div class="pcb-popup-powered">
+          <span>Powered by</span>
+          <img src="galeria_computec/LogoLimpio4.png" alt="Computec Logo">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PCB System Chatbot Minimized -->
+  <div id="pcbChatbot" class="pcb-chatbot" onclick="openPopup()">
+    <div class="pcb-chatbot-icon">
+      <i class="fas fa-robot"></i>
+    </div>
+    <div class="pcb-chatbot-badge">
+      <span>Próximamente</span>
+    </div>
+    <div class="pcb-chatbot-pulse"></div>
+    <div class="pcb-chatbot-logo">
+      <img src="galeria_computec/LogoLimpio4.png" alt="Computec">
+    </div>
+  </div>
+
+  <script>
+    // PCB System Popup Functions
+    function closePopup() {
+      document.getElementById('pcbSystemPopup').classList.remove('active');
+      document.getElementById('pcbChatbot').classList.add('visible');
+    }
+
+    function openPopup() {
+      document.getElementById('pcbSystemPopup').classList.add('active');
+      document.getElementById('pcbChatbot').classList.remove('visible');
+    }
+
+    // Show popup after 2 seconds
+    setTimeout(function() {
+      document.getElementById('pcbSystemPopup').classList.add('active');
+    }, 2000);
+  </script>
 </body>
 </html>
-
