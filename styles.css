@@ -112,7 +112,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, rgba(0,51,160,0.85), rgba(0,102,204,0.85)),
-              url('Casa Abierta.jpg') center/cover no-repeat;
+                url('/casaabiertapcbtour/foto.jpg') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -269,7 +269,7 @@ body {
 /* Contact */
 .contact {
   background: linear-gradient(rgba(216, 216, 226, 0.918), rgba(217, 220, 223, 0.75)),
-              url('escuela.png') center/cover no-repeat fixed;
+              url('/casaabiertapcbtour/image31.jpg') center/cover no-repeat fixed;
   padding: 5rem 2rem;
   position: relative;
 }
@@ -1248,4 +1248,5 @@ footer a:hover {
   .pcb-popup-powered img {
     height: 28px;
   }
+
 }
