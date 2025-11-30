@@ -340,7 +340,7 @@
     });
   </script>
 
-  <!-- PCB System Popup -->
+ <!-- PCB System Popup -->
   <div id="pcbSystemPopup" class="pcb-popup-overlay">
     <div class="pcb-popup">
       <div class="pcb-popup-header">
@@ -411,13 +411,14 @@
       document.getElementById('pcbChatbot').classList.remove('visible');
     }
 
-    // Show popup after 2 seconds
+    // Show chatbot button after 1 second (with animation)
     setTimeout(function() {
-      document.getElementById('pcbSystemPopup').classList.add('active');
-    }, 2000);
+      document.getElementById('pcbChatbot').classList.add('visible');
+    }, 1000);
   </script>
 </body>
 </html>
+
 
 
 
