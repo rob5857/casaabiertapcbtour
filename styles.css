@@ -569,7 +569,7 @@ footer a:hover {
 #galleryCarousel .carousel-item img.img-centered {
   object-position: center center;
   object-fit: contain;
-  background-color: #1a1a2e;
+  background-color: #ffffff;
 }
 
 #galleryCarousel .carousel-item.active img {
@@ -1304,4 +1304,5 @@ footer a:hover {
     height: 28px;
   }
 }
+
 
